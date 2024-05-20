@@ -1,0 +1,5 @@
+127.0.0.1 - - [03/May/2024:15:21:31 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [03/May/2024:15:21:33 +0900] "GET /web_mybatisEx1/list.jsp HTTP/1.1" 200 1952
+0:0:0:0:0:0:0:1 - - [03/May/2024:15:21:43 +0900] "GET /web_mybatisEx1/write.jsp HTTP/1.1" 200 1065
+0:0:0:0:0:0:0:1 - - [03/May/2024:15:21:50 +0900] "GET /web_mybatisEx1/writeOk.jsp?dname=accounting&loc=hawaii HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [03/May/2024:15:21:50 +0900] "GET /web_mybatisEx1/list.jsp HTTP/1.1" 200 2059

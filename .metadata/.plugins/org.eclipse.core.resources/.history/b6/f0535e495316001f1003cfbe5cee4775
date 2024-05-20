@@ -1,0 +1,46 @@
+package test;
+
+import java.io.IOException;
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+
+
+public class TestMain {
+	public static void main(String[] args) {
+
+// 1. 설정 파일 읽어오기 (설계도)
+		Reader r;
+		try {
+			r = Resources.getResourceAsReader("config/SqlMapConfig.xml");
+		
+// 2. 빌더 //건설 노동자 : SqlSessionFactoryBuilder
+		SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+
+// 3. 팩토리
+		SqlSessionFactory factory = builder.build(r);
+
+// 4. 자원반납
+		r.close();
+
+// 5. 세션객체 (ss)
+		SqlSession ss = factory.openSession(true);
+		
+// 6. 사원 테이블에서 전체 데이터 가져오기
+		ss.selectList("getEmpData");
+		
+// 7. 향상된 for문을 사용해서 출력
+		for (DeptVO vo : list) {
+			System.out.println(vo.getDeptno() + " : " + vo.getDname() + " : " + vo.getLoc());
+		}
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

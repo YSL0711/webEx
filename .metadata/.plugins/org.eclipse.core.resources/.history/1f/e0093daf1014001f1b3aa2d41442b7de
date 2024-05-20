@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>YSL.jsp</title>
+</head>
+<body>
+<<<<<<< HEAD
+	<h3>YSL은 연셔리입니다.</h3>
+	<h3>입생로랑과는 관련없습니다.</h3>
+=======
+	<h3>YSL은 연서리입니다</h3>
+	<h3>입생로랑과 관련없습니다</h3>
+>>>>>>> refs/heads/YSL
+</body>
+</html>

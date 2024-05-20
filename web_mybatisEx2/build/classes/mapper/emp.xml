@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sq1문 -->
+<!-- CRUD - ->
+<!-- 전체조회 -- >
+<!-- namepspace명 : kr.co.jhta.web -- >
+<!-- emp 전체조회 id: queryAllEmp -- >
+<!-- 1건 추가 id: insertEmpOne -- >
+<!-- 1건 변경 id: updateEmpOne -- >
+<!-- 1건 삭제 id: deleteEmpOne -- >

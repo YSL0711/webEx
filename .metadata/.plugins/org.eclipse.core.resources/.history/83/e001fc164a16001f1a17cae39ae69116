@@ -1,0 +1,12 @@
+package mail;
+
+import jakarta.servlet.http.HttpServlet;
+
+public class MailController extends HttpServlet{
+	private void doGet() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+}

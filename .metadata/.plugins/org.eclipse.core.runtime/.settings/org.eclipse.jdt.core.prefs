@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=17
+org.eclipse.jdt.core.compiler.compliance=17
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.release=enabled
+org.eclipse.jdt.core.compiler.source=17
+org.eclipse.jdt.core.userLibrary.myLib=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="D\:/dev/myLib/lombok.jar"/>\r\n\t<archive path\="D\:/dev/myLib/mybatis-3.5.16.jar"/>\r\n\t<archive path\="D\:/dev/myLib/ojdbc11.jar"/>\r\n\t<archive path\="D\:/dev/myLib/activation-1.1.1.jar"/>\r\n\t<archive path\="D\:/dev/myLib/cos.jar"/>\r\n\t<archive path\="D\:/dev/myLib/cos2.jar"/>\r\n\t<archive path\="D\:/dev/myLib/jakarta.servlet-api-6.1.0-M1.jar"/>\r\n\t<archive path\="D\:/dev/myLib/jakartaee-migration-1.0.8-shaded.jar"/>\r\n\t<archive path\="D\:/dev/myLib/javax.mail-1.6.2.jar"/>\r\n\t<archive path\="D\:/dev/myLib/mysql-connector-j-8.3.0.jar"/>\r\n</userlibrary>\r\n

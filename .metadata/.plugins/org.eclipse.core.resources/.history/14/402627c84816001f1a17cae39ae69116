@@ -1,0 +1,45 @@
+package util;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class MailUtil {
+
+	
+	public void send() {
+	     // 보내는 사람 이메일
+	      /* String username = "본인메일계정"; */
+	      String username = "dldustj1234@naver.com";
+	      
+	      // 보내는 사람 비번
+	      /* String password = "본인네이버비밀번호"; */
+	      String password = "6Q911NWX6316";
+	           
+	      // 받는 사람 이메일
+	      String receiver = "dldustj1234@hanmail.net";
+	      
+	      // javax.mail.Session
+	      Session sessions = Session.getInstance(p, new Authenticator(){
+	    	  protected PasswordAuthentication getPasswordAuthentication(){
+	    		  return new PasswordAuthentication(username, password);
+	    	  }
+	      });
+	      
+	      System.out.println("sessions : " + sessions);
+	      
+	      String title = "test 인증번호입니다";
+	      
+	      Message message = new MimeMessage(sessions);
+	      message.setFrom(new InternetAddress("dldustj1234@naver.com", "test", "utf-8"));
+	      message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiver));
+	      message.setSubject(title);
+	      message.setContent(sb.toString(), "text/html;charset=utf-8");
+	      Transport.send(message);
+		
+	}
+}

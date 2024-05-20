@@ -1,0 +1,8 @@
+
+	<!ELEMENT 학생들 (학생)+ >
+	<!ELEMENT 학생 (학번, 이름, 나이*, 주소, 전화번호?) >
+	<!ELEMENT 학번 (#PCDATA) >
+	<!ELEMENT 이름 (#PCDATA) >
+	<!ELEMENT 나이 (#PCDATA) >
+	<!ELEMENT 주소 (#PCDATA) >
+	<!ELEMENT 전화번호 (#PCDATA) >

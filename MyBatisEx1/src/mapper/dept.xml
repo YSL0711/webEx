@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 모든 SQL문을 모아 놓은 곳. -->
+<!-- mybatis에서는 namespace의 값이 반드시 존재해야 함. 적어도 공백 1칸이라도 넣어야 한다. -->
+
+
+<mapper namespace=" ">
+
+</mapper>

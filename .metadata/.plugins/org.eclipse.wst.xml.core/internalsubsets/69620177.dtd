@@ -1,0 +1,7 @@
+
+	<!ELEMENT phone (handphone+) >
+	<!ELEMENT handphone ( os, name*, price ) >
+	<!ELEMENT os (#PCDATA) >
+	<!ELEMENT name (#PCDATA) >
+	<!ELEMENT price (#PCDATA) >
+

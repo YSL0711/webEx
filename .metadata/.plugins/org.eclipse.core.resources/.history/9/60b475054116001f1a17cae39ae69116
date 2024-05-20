@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+p.put("mail. smtp. auth", "true");
+p.put("mail.smtp.port", "587");
+
+/ 보낼 메세지
+StringBuffer sb = new StringBuffer();
+sb.append(" <h3> 가입 테스트 메일입니다. </h3> ")
+sb.append(" <h3> 승인번호는 1234입니다. </h3> ")
+
+//보내는 사람 이메일
+ String username = "본인메일계정";
+
+//보내는 사람 비번
+String password = "본인네이버비밀번호";
+
+//받는 사람 이메일
+String receiver = "dldustj1234@gmail.com";
+
+//javax.Session
+Session session = Session.getInstance(p, new Authenticatior())
+</body>
+</html>

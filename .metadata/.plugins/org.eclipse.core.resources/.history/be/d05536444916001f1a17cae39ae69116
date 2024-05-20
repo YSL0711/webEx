@@ -1,0 +1,68 @@
+package util;
+
+import java.util.Properties;
+
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class MailUtil {
+	private static final String USERNAME = "dldustj1234@naver.com";
+	private static final String PASSWORD = "6Q911NWX6316";
+	
+	
+	public void send() {
+		   Properties p = new Properties();
+		      
+		      // 네이버 설정
+		      p.put("mail.smtp.enable", "true");
+		      p.put("mail.smtp.host", "smtp.naver.com");
+		      p.put("mail.smtp.auth", "true");
+		      p.put("mail.smtp.port", "587");
+		      
+		      // 보낼 메시지
+		      StringBuffer sb = new StringBuffer();
+		      
+		      sb.append("<h3> 올리비아 로드리고 첫 내한공연 라이브네이션 선예매 </h3>");
+		      
+		      sb.append("<h3> 2024.09.20 ~ 09.21 </h3>");
+		      
+		      String code = ""+(int)(Math.random()*10000);
+		      
+		      sb.append("<h3> 승인번호는 "+code+"입니다</h3>");
+		      
+	     // 보내는 사람 이메일
+	      /* String username = "본인메일계정"; */
+	      String username = "dldustj1234@naver.com";
+	      
+	      // 보내는 사람 비번
+	      /* String password = "본인네이버비밀번호"; */
+	      String password = "6Q911NWX6316";
+	           
+	      // 받는 사람 이메일
+	      String receiver = "dldustj1234@hanmail.net";
+	      
+	      // javax.mail.Session
+	      Session sessions = Session.getInstance(p, new Authenticator(){
+	    	  protected PasswordAuthentication getPasswordAuthentication(){
+	    		  return new PasswordAuthentication(username, password);
+	    	  }
+	      });
+	      
+	      System.out.println("sessions : " + sessions);
+	      
+	      String title = "test 인증번호입니다";
+	      
+	      Message message = new MimeMessage(sessions);
+	      message.setFrom(new InternetAddress("dldustj1234@naver.com", "test", "utf-8"));
+	      message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiver));
+	      message.setSubject(title);
+	      message.setContent(sb.toString(), "text/html;charset=utf-8");
+	      Transport.send(message);
+		
+	}
+}

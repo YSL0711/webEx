@@ -1,0 +1,70 @@
+<%@page import="javax.mail.PasswordAuthentication"%>
+<%@page import="javax.mail.Authenticator"%>
+<%@page import="javax.mail.Session"%>
+<%@page import="java.util.Properties"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sendEmail.jsp</title>
+</head>
+<body>
+   <%
+      Properties p = new Properties();
+      
+      // 네이버 설정
+      p.put("mail.smtp.enable", "true");
+      p.put("mail.smtp.host", "smtp.naver.com");
+      p.put("mail.smtp.auth", "true");
+      p.put("mail.smtp.port", "587");
+      
+      // 보낼 메시지
+      StringBuffer sb = new StringBuffer();
+      
+      sb.append("<h3> 가입환영합니다. </h3>");
+      
+      sb.append("<h3> 가입 테스트 메일입니다. </h3>");
+      
+      sb.append("<h3> 승인번호는 1234 입니다. </h3>");
+      
+      // 보내는 사람 이메일
+      /* String username = "본인메일계정"; */
+      String username = "dldustj1234@naver.com";
+      
+      // 보내는 사람 비번
+      /* String password = "본인네이버비밀번호"; */
+      String password = "~!mu7287mu~!";
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      // 받는 사람 이메일
+      String receiver = "dagda@hanafos.com";
+      
+      // javax.mail.Session
+      Session sessions = Session.getInstance(p, new Authenticator(){
+    	  protected PasswordAuthentication getPasswordAuthentication(){
+    		  return new PasswordAuthentication(username, password);
+    	  }
+      });
+      
+      System.out.println("sessions : " + sessions);
+      
+      String title = "test 인증번호입니다";
+      
+      Message message = new MimeMessage(sessions);
+      message.setFrom(new InternetAddress("dldustj1234@naver.com", "test", "utf-8"));
+      message.setRecipient(Message.RecipientType.TO, new InternetAddress(receiver));
+      message.setSubject(title);
+      message.setContent(sb.toString(), "text/html;charset=utf-8");
+      
+   %>
+</body>
+</html>
